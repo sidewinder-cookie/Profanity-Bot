@@ -3,8 +3,6 @@ const client = new Discord.Client();
 const settings = require('./settings.json');
 const profanities = require("swearjar")
 
-const request = require('snekfetch');
-
 client.on ('ready', () => {
 	console.log("I'm Here!")
 });
@@ -22,7 +20,6 @@ client.on('message' , message => {
 		const content = message.content.slice(mention.length + 1).toLowerCase();
 		const keywords = ["motivation", "inspiration", "quotes", "enigma", "the enigma", "officialenigma_"]
 		if (keywords.some(keyword => message.content.includes(keyword))){
-			request.get('https://www.instagram.com/officialenigma_/?__a=1')
 			
 		}
 	}
