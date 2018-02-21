@@ -10,7 +10,7 @@ client.on ('ready', () => {
 
 function messageIsProfane(message) {
     message.author.sendMessage(`The message you sent to ${message.channel} contained profanity, please refrain from using it in the future!`);
-    message.channel.send(`${message.author} sent an inappropriate message and was kicked.`);
+    message.channel.send(`${message.author} sent an inappropriate message and was kicked. Shame`);
     message.delete();
     if (message.member) {
         message.member.kick();
