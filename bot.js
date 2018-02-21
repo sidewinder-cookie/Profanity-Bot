@@ -31,7 +31,10 @@ function doCommand(message, content) {
             .addField("Caption", node.caption)
             .setThumbnail(node.thumbnail_src));
     } else if (command === "advice") {
-        message.reply(`todo`);
+        message.reply(`Advice: https://www.bullying.co.uk/cyberbullying/what-is-cyberbullying/
+CEOP: www.ceop.police.uk/
+
+Remember that if you're being bullied on Discord, you can always report messages and contact support at https://support.discordapp.com/hc/en-us`);
     }
 }
 
