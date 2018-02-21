@@ -10,13 +10,13 @@ client.on ('ready', () => {
 client.on('message' , message => {
 
 	// Profanity Checker
-	if(profanities.profane(message.content)) {
+	if (profanities.profane(message.content)) {
 		message.reply('tut tut')
 	}
-	
+
 	// Enigma motivation
 	const mention = client.user.toString();
-	if(message.content.startsWith(mention)) {
+	if (message.content.startsWith(mention)) {
 		const content = message.content.slice(mention.length + 1).toLowerCase();
 		const keywords = ["motivation", "inspiration", "quotes", "enigma", "the enigma", "officialenigma_"]
 		if (keywords.some(keyword => message.content.includes(keyword))){
