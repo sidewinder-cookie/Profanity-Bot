@@ -25,17 +25,19 @@ function doCommand(message, content) {
     const params = content.split(" ");
     const command = params[0];
     const arguments = params.slice(1);
-    if (command === "motivation") {
+    if (command === "motivation" || command === "enigma") {
         const node = enigma.user.media.nodes[Math.floor(Math.random() * enigma.user.media.nodes.length)];
         message.channel.send(new Discord.RichEmbed()
             .addField("Caption", node.caption)
             .setThumbnail(node.thumbnail_src));
+    } else if (command === "advice") {
+        message.reply(`todo`);
     }
 }
 
 client.on('message', message => {
     
-    if (profanities.profane(message.content)) {
+    if (profanities.profane(message.content) || message.content.includes("banana")) {
         return messageIsProfane(message);
     }
 
