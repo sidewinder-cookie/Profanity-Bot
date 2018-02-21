@@ -1,0 +1,14 @@
+{
+  "name": "censorbot",
+  "version": "0.0.1",
+  "description": "ChatBot that helps reduce yo damn profanity",
+  "main": "profanity_slayer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "JunaidG4",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^11.3.0"
+  }
+}
