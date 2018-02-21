@@ -20,7 +20,9 @@ client.on('message' , message => {
 		const content = message.content.slice(mention.length + 1).toLowerCase();
 		const keywords = ["motivation", "inspiration", "quotes", "enigma", "the enigma", "officialenigma_"]
 		if (keywords.some(keyword => message.content.includes(keyword))){
-			
+			var fs = require('fs');
+			var obj = JSON.parse(fs.readFileSync('./enigma.json', 'utf8'));
+			console.log(obj)
 		}
 	}
 });
